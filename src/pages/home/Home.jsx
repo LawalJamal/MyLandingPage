@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <Container fluid="xl">
       {/* <div className="hero"> */}
-      <div className="hero_content d-flex flex-row-reverse align-items-center py-4 px-3">
+      <div className="hero_content d-flex flex-row-reverse align-items-center ">
         <Image
           src={myImg}
           alt="my image"
@@ -49,8 +49,8 @@ const Home = () => {
         <h3>My Expertise</h3>
         </div>
         <div className="d-flex gap-2 align-items-center justify-content-between mt-5">
-          <div>
-            <Card style={{ width: "16rem"}}>
+          <div className="my_card">
+            <Card style={{ width: "16rem"}} >
               <CiMobile3  size="50px" className="p-2 mt-2"/>
               <Card.Body style={{ height: "180px"}} className="aqua">
                 <Card.Title>Responsive Design</Card.Title>

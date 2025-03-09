@@ -1,5 +1,5 @@
 import { ActionButton } from "@/components";
-import { Container, Form } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 const ContactMe = () => {
   return (
@@ -11,49 +11,64 @@ const ContactMe = () => {
           <p className="omron mt-3">Fill in required fields</p>
         </div>
         <div className="mt-4">
-          <div className="mb-3">
-            {" "}
-            <p>First name</p>
-            <Form>
-              <Form.Control/>
-            </Form>
-          </div>
-          <div className="mb-3">
-            {" "}
-            <p>Last name</p>
-            <Form>
-              <Form.Control/>
-            </Form>
-          </div>
-          <div className="mb-3">
-            {" "}
-            <p>Email</p>
-            <Form>
-              <Form.Control/>
-            </Form>
-          </div>
-          <div className="mb-3">
-            {" "}
-            <p>Phone number</p>
-            <Form>
-              <Form.Control/>
-            </Form>
-          </div>
-          <div className="mb-3">
-            {" "}
-            <p>Message</p>
-            <Form>
-              <Form.Control/>
-            </Form>
-          </div>
-        </div>
-        <div>
-        <ActionButton
-            text="Submit"
-            size="sm"
-            className="w-100 mb-5 mt-3"
-            style={{ backgroundColor: "var(--MediumSlateBlue" }}
-          />
+          <form>
+            <label for="first-name">First Name:</label>
+            <input
+              type="text"
+              id="first-name"
+              name="first-name"
+              required
+              className="mb-3"
+            />
+
+            <label for="last-name">Last Name:</label>
+            <input
+              type="text"
+              id="last-name"
+              name="last-name"
+              required
+              className="mb-3"
+            />
+
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              className="mb-3"
+            />
+
+            <label for="phone-number">Phone Number:</label>
+            <input
+              type="tel"
+              id="phone-number"
+              name="phone-number"
+              required
+              className="mb-3"
+            />
+
+            <label for="message">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              className="mb-3"
+            ></textarea>
+
+            <label for="terms">
+              <input type="checkbox" id="terms" name="terms" required />I accept
+              the terms
+            </label>
+
+            <div className="text-center mt-3">
+              <ActionButton
+                text="Submit"
+                size="sm w-100"
+                style={{ backgroundColor: "var(--MediumSlateBlue" }}
+              />
+            </div>
+          </form>
         </div>
       </div>
     </Container>

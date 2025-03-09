@@ -11,9 +11,9 @@ const Portfolio = () => {
   return (
     <Container fluid="xl" className="mt-5">
       <div>
-        <p>Recent Projects</p>
+        <p className="fw-bold">Recent Projects</p>
         <div className="d-flex justify-content-between">
-          <h3>My Portfolio</h3>
+          <h1>My Portfolio</h1>
           <Link to="https://github.com/LawalJamal">
           <button className="git_button text-white">
             <FaGithub />
